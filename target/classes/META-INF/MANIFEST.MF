@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Built-By: eits
-Build-Jdk: 11.0.11
-Main-Class: Servidor
-Created-By: Maven Integration for Eclipse
-
