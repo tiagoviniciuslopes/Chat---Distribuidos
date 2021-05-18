@@ -32,11 +32,16 @@ public class ReceptorServidor implements Runnable{
 			String nome = socketData.readUTF();
 					
 			System.out.println(nome +  " diz: " + mensagem);
-			
 			mensagemBroadcast(mensagem, nome);
 			
 		}catch(IOException e){
 			System.out.println("catch receive: " + e.getMessage());
+			
+			try {
+				socket.close();
+			}catch(IOException io){
+				System.out.println("catch close: " + io.getMessage());
+			}
 		}
 	}
 	

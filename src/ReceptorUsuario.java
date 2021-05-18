@@ -36,7 +36,8 @@ public class ReceptorUsuario implements Runnable{
 			String mensagem = socketData.readUTF();
 			String nome = socketData.readUTF();
 			
-			System.out.println(nome +  " diz: " + mensagem);
+			if(!nome.equals(this.usuario.getNome()))
+				System.out.println(nome +  " diz: " + mensagem);
 		
 		}catch(IOException e){
 			System.out.println("catch receive: " + e.getMessage());

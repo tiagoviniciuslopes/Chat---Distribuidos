@@ -27,6 +27,7 @@ public class Usuario {
 	
 	public static void main(String[] args) throws Exception{
 		Usuario u = new Usuario();
+		
 		u.abreServidor();
 		u.executa();		
 	}
@@ -46,11 +47,11 @@ public class Usuario {
 		String ip = reader.readLine().trim();
 		u.conecta(ip,port);
 			
-		for (int i = 0; i < 100; ++i) System.out.println();
-		
 		System.out.println("Entre com seu nome de usuario");
 		u.setNome(reader.readLine().trim());
-	
+		this.setNome(u.getNome());
+		
+		for (int i = 0; i < 100; ++i) System.out.println();
 		
 		while(true) {
 			u.setMensagem(reader.readLine().trim());
